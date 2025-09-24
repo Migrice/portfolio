@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="max-w-md flex flex-col justify-center">
         <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-wide leading-tight">
           Hello, I&apos;m{" "}
-          <span className="text-indigo-500">Dohlane KUETE🚀</span>
+          <span className="text-indigo-500">Emelda FOMENA🚀</span>
         </h1>
         <h2 className="text-2xl md:text-3xl text-gray-300 mb-4 font-light leading-snug">
           Développeuse Fullstack & IA
