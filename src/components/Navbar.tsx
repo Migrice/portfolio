@@ -69,7 +69,7 @@ export default function Navbar() {
 
         {/* Mobile Dropdown */}
         {isOpen && (
-          <div className="absolute top-20 left-0 w-full bg-black bg-opacity-90 backdrop-blur-md md:hidden py-6 px-6">
+          <div className="absolute top-20 left-0 w-full bg-opacity-90 backdrop-blur-md md:hidden py-6 px-6">
             <ul className="flex flex-col gap-6 text-white text-lg font-medium">
               <li>
                 <Link href="#home" onClick={toggleMenu}>
