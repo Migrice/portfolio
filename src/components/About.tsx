@@ -1,150 +1,153 @@
 "use client";
 
-import {
-  Cloud,
-  Code,
-  Cpu,
-  Database,
-  GitBranch,
-  HardDrive,
-  Settings,
-  Smartphone,
-} from "lucide-react";
-import Image from "next/image";
+import { motion } from "framer-motion";
+import { Code2, Rocket, Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-export default function AboutSection() {
+// ==================== COMPOSANT ABOUT ====================
+export const About = () => {
+  const t = useTranslations("About");
+
+  const skills = [
+    { name: "React & Next.js", level: 90, color: "bg-blue-500" },
+    { name: "TypeScript", level: 85, color: "bg-cyan-500" },
+    { name: "Python & IA", level: 80, color: "bg-green-500" },
+    { name: "Tailwind CSS", level: 95, color: "bg-purple-500" },
+  ];
+
+  const features = [
+    {
+      icon: <Code2 className="w-6 h-6" />,
+      title: t("clean_code"),
+      description: t("clean_code_desc"),
+    },
+    {
+      icon: <Sparkles className="w-6 h-6" />,
+      title: t("modern_design"),
+      description: t("modern_design_desc"),
+    },
+    {
+      icon: <Rocket className="w-6 h-6" />,
+      title: t("performance"),
+      description: t("performance_desc"),
+    },
+  ];
+
   return (
-    <section className="relative w-full py-32 bg-gray-900 text-white">
-      {/* Texte et photo */}
-      <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
-        {/* Texte gauche */}
-        <div className="md:w-1/2">
-          <h2 className="text-4xl font-extrabold mb-6 text-indigo-500">
-            À propos de moi
+    <section
+      id="about"
+      className="py-20 px-6 md:px-12 bg-white relative overflow-hidden"
+    >
+      {/* Décorations */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-100 rounded-full blur-3xl opacity-30" />
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* En-tête */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            {t("about_me")}
           </h2>
-          <p className="text-lg text-gray-300 mb-4 leading-relaxed">
-            Je m’appelle Laura Kuete, développeuse Fullstack passionnée par la
-            création de solutions web et mobiles intelligentes et performantes.
-            Titulaire d’un Master en Informatique – Science des données, je
-            conçois des applications élégantes et centrées sur l’utilisateur.
-          </p>
-          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-            Curieuse et rigoureuse, je m’intéresse particulièrement au
-            développement web moderne, à l’intelligence artificielle et au
-            traitement du langage naturel. Mon objectif est de transformer des
-            idées complexes en produits intuitifs, fiables et performants.
-          </p>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+        </motion.div>
 
-          <a
-            href="/cv.pdf"
-            className="inline-block px-8 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-full font-medium transition-all"
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+          {/* Image */}
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
           >
-            Voir mon CV
-          </a>
+            <div className="relative w-full max-w-md mx-auto">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-xl opacity-20" />
+              <img
+                src="/images/about2.jpg"
+                alt="About me"
+                className="relative w-full rounded-2xl shadow-2xl border-4 border-white object-contain"
+              />
+            </div>
+          </motion.div>
+
+          {/* Texte */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <h3 className="text-3xl font-bold text-gray-900 mb-6">
+              {t("passionate_developer")}
+            </h3>
+            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+              {t("about_description_1")}
+            </p>
+            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              {t("about_description_2")}
+            </p>
+
+            {/* Compétences */}
+            <div className="space-y-4">
+              {skills.map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                >
+                  <div className="flex justify-between mb-2">
+                    <span className="font-medium text-gray-700">
+                      {skill.name}
+                    </span>
+                    <span className="text-gray-500">{skill.level}%</span>
+                  </div>
+                  <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
+                    <motion.div
+                      className={`h-full ${skill.color} rounded-full`}
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.level}%` }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 + 0.3, duration: 1 }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
 
-        {/* Photo droite */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg hover:scale-105 transition-transform duration-500">
-            <Image
-              src="/images/photo_2025-09-24_13-06-12.jpg"
-              alt="Laura Kuete"
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Compétences */}
-      <div className="container mx-auto mt-20">
-        <h3 className="text-3xl font-bold text-indigo-500 mb-8">
-          Mes compétences
-        </h3>
-        <div className="grid md:grid-cols-3 gap-6 text-gray-200">
-          <div className="p-6 bg-gray-800 rounded-xl shadow hover:shadow-indigo-500 transition">
-            <h4 className="font-semibold mb-2">Développement Backend</h4>
-            <p>
-              Création d’API REST robustes avec Django et Django REST Framework
-            </p>
-          </div>
-          <div className="p-6 bg-gray-800 rounded-xl shadow hover:shadow-indigo-500 transition">
-            <h4 className="font-semibold mb-2">Développement Frontend</h4>
-            <p>Interfaces modernes et réactives avec React.js / Next.js</p>
-          </div>
-          <div className="p-6 bg-gray-800 rounded-xl shadow hover:shadow-indigo-500 transition">
-            <h4 className="font-semibold mb-2">Applications mobiles</h4>
-            <p>Expérience fluide sur iOS et Android avec React Native / Expo</p>
-          </div>
-          <div className="p-6 bg-gray-800 rounded-xl shadow hover:shadow-indigo-500 transition">
-            <h4 className="font-semibold mb-2">IA & NLP</h4>
-            <p>
-              Conception de chatbots intelligents et traitement du langage
-              naturel
-            </p>
-          </div>
-          <div className="p-6 bg-gray-800 rounded-xl shadow hover:shadow-indigo-500 transition">
-            <h4 className="font-semibold mb-2">Cloud & DevOps</h4>
-            <p>
-              Déploiement et intégration continue sur des environnements cloud
-            </p>
-          </div>
-          <div className="p-6 bg-gray-800 rounded-xl shadow hover:shadow-indigo-500 transition">
-            <h4 className="font-semibold mb-2">Bases de données</h4>
-            <p>
-              Conception et optimisation de schémas MySQL, PostgreSQL, SQLite
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Technologies & outils avec Lucide */}
-      <div className="container mx-auto mt-20">
-        <h3 className="text-3xl font-bold text-indigo-500 mb-8">
-          Technologies & outils
-        </h3>
-        <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 gap-6 text-gray-300">
-          <div className="flex flex-col items-center gap-2 hover:text-indigo-500 transition">
-            <Code className="w-12 h-12" />
-            <span className="text-sm text-center">Python / JS / TS</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 hover:text-cyan-400 transition">
-            <Cpu className="w-12 h-12" />
-            <span className="text-sm text-center">React / Next.js</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 hover:text-green-500 transition">
-            <Cloud className="w-12 h-12" />
-            <span className="text-sm text-center">Django / Cloud</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 hover:text-yellow-400 transition">
-            <Database className="w-12 h-12" />
-            <span className="text-sm text-center">MySQL / PostgreSQL</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 hover:text-indigo-500 transition">
-            <Smartphone className="w-12 h-12" />
-            <span className="text-sm text-center">React Native / Expo</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 hover:text-cyan-500 transition">
-            <HardDrive className="w-12 h-12" />
-            <span className="text-sm text-center">SQLite / Storage</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 hover:text-white transition">
-            <Settings className="w-12 h-12" />
-            <span className="text-sm text-center">Outils & DevOps</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2 hover:text-indigo-400 transition">
-            <GitBranch className="w-12 h-12" />
-            <span className="text-sm text-center">Git</span>
-          </div>
+        {/* Features */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-shadow"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2, duration: 0.6 }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white mb-6">
+                {feature.icon}
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                {feature.title}
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                {feature.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
   );
-}
+};

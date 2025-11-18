@@ -1,0 +1,78 @@
+{
+  "Hero": {
+    "salutation": "Salut, je suis",
+    "software_developer_ai_specialist": "Développeuse Full-Stack & Data Scientist",
+    "I build modern apps with": "Je crée des applications modernes avec ",
+    "and": "et ",
+    "see_my_projects": "Voir mes projets",
+    "download_cv": "Télécharger le CV",
+    "by_integrating_intelligent_solutions": "en intégrant des solutions intelligentes basées sur l’IA.",
+    "available_for_work": "Disponible pour des projets"
+  },
+  "Navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "contact": "Contact"
+  },
+  "About": {
+    "clean_code": "Code Propre",
+    "clean_code_desc": "J'écris du code maintenable et scalable en suivant les meilleures pratiques.",
+    "modern_design": "Design Moderne",
+    "modern_design_desc": "Interfaces utilisateur élégantes et responsive avec une attention aux détails.",
+    "performance": "Performance",
+    "performance_desc": "Optimisation pour des temps de chargement rapides et une expérience fluide.",
+    "about_me": "À Propos",
+    "passionate_developer": "Développeur Passionnée par l'Innovation",
+    "about_description_1": "Avec plus de 3 ans d'expérience en développement web et en intelligence artificielle, je transforme des idées complexes en applications élégantes et performantes.",
+    "about_description_2": "Ma passion pour l'apprentissage continu me pousse à explorer constamment les dernières technologies pour créer des solutions innovantes."
+  },
+  "Contact": {
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "contact_me": "Contactez-Moi",
+    "contact_description": "Vous avez un projet en tête ? N'hésitez pas à me contacter. Je serais ravie d'en discuter !",
+    "follow_me": "Suivez-moi",
+    "message_sent": "Message envoyé !",
+    "message_sent_desc": "Merci pour votre message. Je vous répondrai dans les plus brefs délais.",
+    "name": "Nom",
+    "your_name": "Nom",
+    "your_email": "ex: john.doe@gmail.com",
+    "subject": "Sujet",
+    "subject_placeholder": "[Contact.subject_placeholder]",
+    "message_placeholder": "Votre message...",
+    "sending": "Envoi en cours...",
+    "send_message": "Envoyer le message"
+  },
+  "Projects": {
+    "project_1_desc": "Plateforme e-commerce complète avec paiement intégré, gestion de stock et tableau de bord admin.",
+    "project_2_desc": "Application web de gestion de pressing avec prise en compte de plusieurs depots et types de services.",
+    "project_3_desc": "Application web de digitalisation des processus de durabilité dans les chaînes de valeur agricoles.",
+    "project_4_desc": "Modèle d'IA pour l'analyse des sentiments basée sur les aspects",
+    "my_projects": "Mes Projets",
+    "projects_description": "Découvrez une sélection de mes réalisations récentes, alliant design moderne et technologies de pointe.",
+    "view_all_projects": "Voir tous mes projets sur GitHub",
+    "project_5_desc": "Application mobile off-line first de suivi des depenses personnelles avec visualisation des données.",
+    "project_6_desc": "[Projects.project_6_desc]",
+    "project_7_desc": "[Projects.project_7_desc]",
+    "all": "Tout",
+    "web": "Web",
+    "mobile": "Mobile",
+    "ai": "AI",
+    "projects": "projets",
+    "project": "Projet",
+    "no_projects": "Aucun projet trouvé",
+    "no_projects_desc": "[Projects.no_projects_desc]",
+    "project_8_desc": "Plateforme de vente et de gestion de stock des produits agro-pastoraux"
+  },
+  "Skills": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ai_ml": "IA",
+    "tools": "Outils",
+    "my_skills": "Technologies & Outils",
+    "skills_description": "Les technologies les plus souvent utilisées dans mes projets.",
+    "certifications": "[Skills.certifications]"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "Hero": {
+    "salutation": "Hello, I'm",
+    "software_developer_ai_specialist": "Full-Stack Developper & Data Scientist",
+    "I build modern apps with": "I build modern applications with",
+    "and": "and ",
+    "see_my_projects": "See my projects",
+    "download_cv": "Download CV",
+    "by_integrating_intelligent_solutions": "by integrating intelligent AI-based solutions.",
+    "available_for_work": "Available for work"
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "About": {
+    "clean_code": "Clean Code",
+    "clean_code_desc": "I write maintainable and scalable code by following best practices.",
+    "modern_design": "Modern Design",
+    "modern_design_desc": "Elegant and responsive user interfaces with great attention to detail.",
+    "performance": "Performance",
+    "performance_desc": "Optimized for fast loading times and a smooth user experience.",
+    "about_me": "About Me",
+    "passionate_developer": "Developer Passionate About Innovation",
+    "about_description_1": "With over 3 years of experience in web development and artificial intelligence, I turn complex ideas into elegant and high-performance applications.",
+    "about_description_2": "My passion for continuous learning drives me to constantly explore the latest technologies to create innovative solutions."
+  },
+  "Contact": {
+    "phone": "Phone",
+    "location": "Location",
+    "contact_me": "Contact Me",
+    "contact_description": "Do you have a project in mind? Feel free to reach out. I’d be happy to discuss it!",
+    "follow_me": "Follow Me",
+    "message_sent": "Message Sent!",
+    "message_sent_desc": "Thank you for your message. I’ll get back to you as soon as possible.",
+    "name": "Name",
+    "your_name": "Your Name",
+    "your_email": "e.g. john.doe@gmail.com",
+    "subject": "Subject",
+    "subject_placeholder": "[Contact.subject_placeholder]",
+    "message_placeholder": "Your message...",
+    "sending": "Sending...",
+    "send_message": "Send Message"
+  },
+  "Projects": {
+    "project_1_desc": "Complete e-commerce platform with integrated payment system, inventory management, and admin dashboard.",
+    "project_2_desc": "Web application for laundry management supporting multiple drop-off locations and various service types.",
+    "project_3_desc": "Web platform for digitizing sustainability processes in agricultural value chains.",
+    "project_4_desc": "[Projects.project_4_desc]",
+    "my_projects": "My Projects",
+    "projects_description": "Discover a selection of my recent work, combining modern design with cutting-edge technologies.",
+    "view_all_projects": "View all my projects on GitHub",
+    "project_5_desc": "[Projects.project_5_desc]",
+    "project_6_desc": "[Projects.project_6_desc]",
+    "project_7_desc": "[Projects.project_7_desc]",
+    "all": "All",
+    "web": "Web",
+    "mobile": "Mobile",
+    "ai": "AI",
+    "projects": "projects",
+    "project": "Project",
+    "no_projects": "No project found",
+    "no_projects_desc": "[Projects.no_projects_desc]",
+    "project_8_desc": "[Projects.project_8_desc]"
+  },
+  "Skills": {
+    "frontend": "[Skills.frontend]",
+    "backend": "[Skills.backend]",
+    "ai_ml": "[Skills.ai_ml]",
+    "tools": "[Skills.tools]",
+    "my_skills": "[Skills.my_skills]",
+    "skills_description": "[Skills.skills_description]",
+    "certifications": "[Skills.certifications]"
+  }
+}
