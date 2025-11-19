@@ -46,8 +46,8 @@
     "send_message": "Envoyer le message"
   },
   "Projects": {
-    "project_1_desc": "Plateforme e-commerce complète avec paiement intégré, gestion de stock et tableau de bord admin.",
-    "project_2_desc": "Application web de gestion de pressing avec prise en compte de plusieurs depots et types de services.",
+    "project_1_desc": "Application web de gestion de pressing avec prise en compte de plusieurs depots et types de services.",
+    "project_2_desc": "Application web complète conçue pour révolutionner la façon dont vous gérez et analysez vos journaux",
     "project_3_desc": "Application web de digitalisation des processus de durabilité dans les chaînes de valeur agricoles.",
     "project_4_desc": "Modèle d'IA pour l'analyse des sentiments basée sur les aspects",
     "my_projects": "Mes Projets",
@@ -73,6 +73,6 @@
     "tools": "Outils",
     "my_skills": "Technologies & Outils",
     "skills_description": "Les technologies les plus souvent utilisées dans mes projets.",
-    "certifications": "[Skills.certifications]"
+    "certifications": "Certifications"
   }
 }

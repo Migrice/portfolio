@@ -12,9 +12,9 @@ export const Projects = () => {
 
   const projects = [
     {
-      id: 2,
+      id: 1,
       title: "Beloh",
-      description: t("project_2_desc"),
+      description: t("project_1_desc"),
       image: "/images/beloh.png",
       tags: [
         "Next JS",
@@ -23,6 +23,25 @@ export const Projects = () => {
         "Python",
         "Django",
         "Django Rest Framework",
+      ],
+      github: "https://github.com",
+      demo: "https://www.beloh.tech/",
+      category: "web",
+      featured: true,
+    },
+
+    {
+      id: 2,
+      title: "LogExplorer",
+      description: t("project_2_desc"),
+      image: "/images/logExplorer.png",
+      tags: [
+        "GraphLQL",
+        "MongoDB",
+        "ElasticSearch",
+        "RabbitMQ",
+        "FastApi",
+        "Jenkins",
       ],
       github: "https://github.com",
       demo: "https://www.beloh.tech/",

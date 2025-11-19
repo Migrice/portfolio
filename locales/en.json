@@ -46,14 +46,14 @@
     "send_message": "Send Message"
   },
   "Projects": {
-    "project_1_desc": "Complete e-commerce platform with integrated payment system, inventory management, and admin dashboard.",
-    "project_2_desc": "Web application for laundry management supporting multiple drop-off locations and various service types.",
+    "project_1_desc": "Web application for laundry management supporting multiple drop-off locations and various service types.",
+    "project_2_desc": "Complete web application designed to revolutionize the way you manage and analyze your logs",
     "project_3_desc": "Web platform for digitizing sustainability processes in agricultural value chains.",
-    "project_4_desc": "[Projects.project_4_desc]",
+    "project_4_desc": "Aspect-based sentiment analysis AI model",
     "my_projects": "My Projects",
     "projects_description": "Discover a selection of my recent work, combining modern design with cutting-edge technologies.",
     "view_all_projects": "View all my projects on GitHub",
-    "project_5_desc": "[Projects.project_5_desc]",
+    "project_5_desc": "Offline-first mobile application for personal expense tracking with data visualization.",
     "project_6_desc": "[Projects.project_6_desc]",
     "project_7_desc": "[Projects.project_7_desc]",
     "all": "All",
@@ -64,15 +64,15 @@
     "project": "Project",
     "no_projects": "No project found",
     "no_projects_desc": "[Projects.no_projects_desc]",
-    "project_8_desc": "[Projects.project_8_desc]"
+    "project_8_desc": "Platform for the sale and inventory management of agricultural and pastoral products"
   },
   "Skills": {
-    "frontend": "[Skills.frontend]",
-    "backend": "[Skills.backend]",
-    "ai_ml": "[Skills.ai_ml]",
-    "tools": "[Skills.tools]",
-    "my_skills": "[Skills.my_skills]",
-    "skills_description": "[Skills.skills_description]",
-    "certifications": "[Skills.certifications]"
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ai_ml": "AI & ML",
+    "tools": "Tools",
+    "my_skills": "Technologies & Tools",
+    "skills_description": "The technologies most frequently used in my projects.",
+    "certifications": "Certifications"
   }
 }
