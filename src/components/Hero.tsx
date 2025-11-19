@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
@@ -130,11 +131,13 @@ const Hero = () => {
               }}
             >
               <div className="relative w-72 md:w-96 h-72 md:h-96">
-                <img
+                <Image
                   src="/images/hero.jpg"
                   alt="Laura Dev Hero"
-                  className="w-full h-full object-contain rounded-3xl shadow-2xl border-4 border-white"
+                  fill // 🔥 L’image prend toute la div (w-72/h-72)
+                  className="object-contain rounded-3xl shadow-2xl border-4 border-white"
                 />
+
                 {/* Overlay gradient subtil */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-3xl" />
               </div>

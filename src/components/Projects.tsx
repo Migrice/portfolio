@@ -3,26 +3,14 @@
 import { motion } from "framer-motion";
 import { Brain, ExternalLink, Github, Globe, Smartphone } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useState } from "react";
 
-// ==================== COMPOSANT PROJECTS ====================
 export const Projects = () => {
   const t = useTranslations("Projects");
   const [activeTab, setActiveTab] = useState("all");
 
   const projects = [
-    // {
-    //   id: 1,
-    //   title: "E-Commerce Platform",
-    //   description: t("project_1_desc"),
-    //   image:
-    //     "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-    //   tags: ["Next.js", "TypeScript", "Stripe", "Prisma"],
-    //   github: "https://github.com",
-    //   demo: "https://demo.com",
-    //   category: "web",
-    //   featured: true,
-    // },
     {
       id: 2,
       title: "Beloh",
@@ -74,34 +62,7 @@ export const Projects = () => {
       category: "mobile",
       featured: false,
     },
-    // {
-    //   id: 6,
-    //   title: "Chatbot IA Multilingue",
-    //   description:
-    //     t("project_6_desc") ||
-    //     "Assistant conversationnel intelligent avec support multilingue et analyse de sentiment.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80",
-    //   tags: ["Python", "TensorFlow", "NLP", "React"],
-    //   github: "https://github.com",
-    //   demo: "https://demo.com",
-    //   category: "ai",
-    //   featured: false,
-    // },
-    // {
-    //   id: 7,
-    //   title: "Fitness Tracker",
-    //   description:
-    //     t("project_7_desc") ||
-    //     "Application de suivi d'activités physiques avec plans d'entraînement personnalisés.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80",
-    //   tags: ["Flutter", "Dart", "Firebase", "HealthKit"],
-    //   github: "https://github.com",
-    //   demo: "https://demo.com",
-    //   category: "mobile",
-    //   featured: true,
-    // },
+
     {
       id: 8,
       title: "Nzhinufarm",
@@ -206,7 +167,7 @@ export const Projects = () => {
           // exit={{ opacity: 0, y: -20 }}
           // transition={{ duration: 0.5 }}
         >
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <motion.div
               key={project.id}
               className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
@@ -218,9 +179,11 @@ export const Projects = () => {
             >
               {/* Image */}
               <div className="relative h-56 overflow-hidden rounded-bl-4xl">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={600} // mets une valeur cohérente (peu importe, Next optimise)
+                  height={400}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import { Code2, Rocket, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
-// ==================== COMPOSANT ABOUT ====================
 export const About = () => {
   const t = useTranslations("About");
 
@@ -67,9 +67,12 @@ export const About = () => {
           >
             <div className="relative w-full max-w-md mx-auto">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-xl opacity-20" />
-              <img
+
+              <Image
                 src="/images/about2.jpg"
                 alt="About me"
+                width={500} // mets une valeur adaptée
+                height={500} // Next.js en a besoin
                 className="relative w-full rounded-2xl shadow-2xl border-4 border-white object-contain"
               />
             </div>
