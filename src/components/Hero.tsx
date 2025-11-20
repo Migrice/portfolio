@@ -76,7 +76,7 @@ const Hero = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href="#projects"
-                className="px-8 py-4 bg-black text-white rounded-xl font-medium shadow-lg shadow-gray-500/30 hover:shadow-xl hover:shadow-gray-500/40 transition-all"
+                className="px-8 py-4 bg-gray-700 text-white rounded-xl font-medium shadow-lg shadow-gray-500/30 hover:shadow-xl hover:shadow-gray-500/40 transition-all"
               >
                 {t("see_my_projects")}
               </Link>
