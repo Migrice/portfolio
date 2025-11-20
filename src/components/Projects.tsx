@@ -136,7 +136,7 @@ export const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {t("my_projects")}
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6" />
+          <div className="w-20 h-0.5 bg-gray-200 mx-auto rounded-full mb-6" />
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             {t("projects_description")}
           </p>
@@ -165,7 +165,7 @@ export const Projects = () => {
               {activeTab === tab.id && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl"
+                  className="absolute inset-0 font-bold bg-gray-600 rounded-xl"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
               )}
@@ -207,7 +207,6 @@ export const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                {/* Liens au survol */}
                 <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500  ">
                   <motion.a
                     href={project.github}
@@ -223,7 +222,7 @@ export const Projects = () => {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transition-colors shadow-lg"
+                    className="p-3 bg-gray-600 transition-colors shadow-lg rounded-full"
                     whileHover={{ scale: 1.1, rotate: -5 }}
                     whileTap={{ scale: 0.9 }}
                   >

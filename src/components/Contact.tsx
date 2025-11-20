@@ -9,7 +9,6 @@ import {
   MapPin,
   Phone,
   Send,
-  Twitter,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
@@ -82,12 +81,6 @@ export const Contact = () => {
       url: "https://www.linkedin.com/in/emelda-fomena-kuete-00644b247/",
       color: "hover:bg-blue-600",
     },
-    {
-      icon: <Twitter className="w-6 h-6" />,
-      name: "Twitter",
-      url: "https://twitter.com",
-      color: "hover:bg-sky-500",
-    },
   ];
 
   return (
@@ -111,7 +104,7 @@ export const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {t("contact_me")}
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6" />
+          <div className="w-20 h-0.5 bg-gray-200 mx-auto rounded-full mb-6" />
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             {t("contact_description")}
           </p>
@@ -139,7 +132,7 @@ export const Contact = () => {
               >
                 <div className="flex items-start gap-4">
                   <div
-                    className={`w-14 h-14 bg-gradient-to-br ${info.color} rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform`}
+                    className={`w-14 h-14 bg-gray-400 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform`}
                   >
                     {info.icon}
                   </div>
@@ -220,7 +213,7 @@ export const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-300 focus:border-transparent outline-none transition-all"
                       />
                     </div>
                     <div>
@@ -233,7 +226,7 @@ export const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-300 focus:border-transparent outline-none transition-all"
                       />
                     </div>
                   </div>
@@ -248,7 +241,7 @@ export const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-300 focus:border-transparent outline-none transition-all"
                     />
                   </div>
 
@@ -262,7 +255,7 @@ export const Contact = () => {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-300 focus:border-transparent outline-none transition-all resize-none"
                       placeholder={t("message_placeholder")}
                     />
                   </div>
@@ -270,7 +263,7 @@ export const Contact = () => {
                   <motion.button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full px-8 py-4 bg-black text-white rounded-xl font-medium shadow-lg shadow-gray-500/30 hover:shadow-xl hover:shadow-gray-500/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     whileHover={{ scale: isLoading ? 1 : 1.02 }}
                     whileTap={{ scale: isLoading ? 1 : 0.98 }}
                   >

@@ -103,7 +103,7 @@ export const Skills = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {t("my_skills")}
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6" />
+          <div className="w-20 h-0.5 bg-gray-200 mx-auto rounded-full mb-6" />
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             {t("skills_description")}
           </p>

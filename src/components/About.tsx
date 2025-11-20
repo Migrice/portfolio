@@ -9,10 +9,10 @@ export const About = () => {
   const t = useTranslations("About");
 
   const skills = [
-    { name: "React & Next.js", level: 90, color: "bg-blue-500" },
-    { name: "TypeScript", level: 85, color: "bg-cyan-500" },
-    { name: "Python & IA", level: 80, color: "bg-green-500" },
-    { name: "Tailwind CSS", level: 95, color: "bg-purple-500" },
+    { name: "React & Next.js", level: 90, color: "bg-gray-400" },
+    { name: "TypeScript", level: 85, color: "bg-gray-400" },
+    { name: "Python & IA", level: 80, color: "bg-gray-400" },
+    { name: "Tailwind CSS", level: 95, color: "bg-gray-400" },
   ];
 
   const features = [
@@ -38,11 +38,9 @@ export const About = () => {
       id="about"
       className="py-20 px-6 md:px-12 bg-white relative overflow-hidden"
     >
-      {/* Décorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-purple-100 rounded-full blur-3xl opacity-30" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* En-tête */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +51,7 @@ export const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {t("about_me")}
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+          <div className="w-20 h-0.5 bg-gray-200 mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
@@ -95,7 +93,6 @@ export const About = () => {
               {t("about_description_2")}
             </p>
 
-            {/* Compétences */}
             <div className="space-y-4">
               {skills.map((skill, index) => (
                 <motion.div
@@ -138,7 +135,7 @@ export const About = () => {
               transition={{ delay: index * 0.2, duration: 0.6 }}
               whileHover={{ y: -5 }}
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white mb-6">
+              <div className="w-14 h-14 bg-gray-400 rounded-xl flex items-center justify-center text-white mb-6">
                 {feature.icon}
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-3">

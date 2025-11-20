@@ -37,16 +37,14 @@ const Hero = () => {
           </motion.div>
 
           <motion.h1
-            className="text-3xl md:text-6xl font-bold text-gray-900 leading-tight"
+            className="text-xl md:text-6xl text-gray-900 leading-tight"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
             {t("salutation")}
             <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Emelda Kuete
-            </span>
+            <span className="bg-clip-text font-bold ">Emelda Kuete</span>
           </motion.h1>
 
           <motion.h2
@@ -78,7 +76,7 @@ const Hero = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href="#projects"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-medium shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all"
+                className="px-8 py-4 bg-black text-white rounded-xl font-medium shadow-lg shadow-gray-500/30 hover:shadow-xl hover:shadow-gray-500/40 transition-all"
               >
                 {t("see_my_projects")}
               </Link>
@@ -117,7 +115,6 @@ const Hero = () => {
               }}
             />
 
-            {/* Image avec forme moderne */}
             <motion.div
               className="relative"
               animate={{
@@ -138,36 +135,9 @@ const Hero = () => {
                   className="object-contain rounded-3xl shadow-2xl border-4 border-white"
                 />
 
-                {/* Overlay gradient subtil */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-3xl" />
               </div>
             </motion.div>
-
-            {/* Points décoratifs */}
-            <motion.div
-              className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-2xl rotate-12"
-              animate={{
-                rotate: [12, 22, 12],
-                scale: [1, 1.1, 1],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
-            />
-            <motion.div
-              className="absolute -bottom-6 -left-6 w-20 h-20 bg-blue-500 rounded-full"
-              animate={{
-                scale: [1, 1.2, 1],
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
-            />
           </div>
         </motion.div>
       </div>
