@@ -76,7 +76,7 @@ const Navbar = () => {
           href="/"
           className="text-xl font-bold text-gray-800 dark:text-white"
         >
-          &lt;Emelda<span className="text-blue-600"> Kuete</span>/&gt;
+          &lt;Emelda Kuete/&gt;
         </Link>
 
         <ul className="hidden md:flex space-x-8">
