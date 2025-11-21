@@ -1,196 +1,99 @@
 "use client";
 
-import { Globe, Menu, Moon, Sun, X } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { Menu, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher";
 
-const Navbar = () => {
+const navLinks = [
+  { href: "#home", key: "home" },
+  { href: "#about", key: "about" },
+  { href: "#projects", key: "projects" },
+  { href: "#skills", key: "skills" },
+  { href: "#experiences", key: "experiences" },
+  { href: "#contact", key: "contact" },
+];
+
+export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [langOpen, setLangOpen] = useState(false);
-
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
   const t = useTranslations("Navbar");
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const navItems = [
-    { label: "home", href: "/" },
-    { label: "about", href: "#about" },
-    { label: "projects", href: "#projects" },
-    { label: "skills", href: "#skills" },
-    { label: "contact", href: "#contact" },
-  ];
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setLangOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved === "light" || saved === "dark") {
-      setTheme(saved);
-      if (saved === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    }
-  }, []);
-
-  const switchLanguage = (lang: string) => {
-    const pathWithoutLocale = pathname.replace(`/${locale}`, "");
-    router.push(`/${lang}${pathWithoutLocale}`);
-    setLangOpen(false);
-  };
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-
-    localStorage.setItem("theme", newTheme);
-  };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white/80 dark:bg-black/40 backdrop-blur-lg shadow-sm z-50">
-      <nav className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-xl font-bold text-gray-800 dark:text-white"
-        >
-          &lt;Emelda Kuete/&gt;
-        </Link>
+    <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-white/10 backdrop-blur-md py-4">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14">
+          <Link href="/">
+            <span className="text-xl font-bold text-primary">EF.</span>
+          </Link>
 
-        <ul className="hidden md:flex space-x-8">
-          {navItems.map((item) => (
-            <li key={item.label}>
-              <Link
-                href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition font-medium"
-              >
-                {t(item.label)}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        <div className="hidden md:flex items-center space-x-4">
-          <div className="relative" ref={dropdownRef}>
-            <button
-              className="flex items-center gap-1 text-gray-700 dark:text-gray-300"
-              onClick={() => setLangOpen((prev) => !prev)}
-            >
-              <Globe size={20} /> {locale.toUpperCase()}
-            </button>
-
-            {langOpen && (
-              <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-lg py-2 w-28">
-                <button
-                  onClick={() => switchLanguage("en")}
-                  className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                >
-                  🇺🇸 EN
-                </button>
-                <button
-                  onClick={() => switchLanguage("fr")}
-                  className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                >
-                  🇫🇷 FR
-                </button>
-              </div>
-            )}
-          </div>
-
-          <button
-            onClick={toggleTheme}
-            className="text-gray-700 dark:text-gray-300"
-          >
-            {theme === "light" ? <Moon size={22} /> : <Sun size={22} />}
-          </button>
-        </div>
-
-        <button
-          className="md:hidden text-gray-700 dark:text-gray-300"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </nav>
-
-      {open && (
-        <div className="md:hidden bg-white dark:bg-black/80 backdrop-blur-lg shadow-md">
-          <ul className="flex flex-col space-y-4 px-6 py-4">
-            {navItems.map((item) => (
-              <li key={item.label}>
+          <div className="hidden md:flex items-center md:space-x-10 lg:space-x-14">
+            <div className="flex items-center md:space-x-5 lg:space-x-7">
+              {navLinks.map((link) => (
                 <Link
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 text-lg font-medium"
+                  key={link.key}
+                  href={link.href}
+                  className="text-sm font-medium dark:text-secondary hover:text-primary transition-colors cursor-pointer"
                 >
-                  {t(item.label)}
+                  {t(link.key)}
                 </Link>
-              </li>
-            ))}
-
-            <div className="pt-4">
-              <p className="text-gray-500 dark:text-gray-400 text-sm mb-2">
-                Language
-              </p>
-              <div className="flex space-x-4">
-                <button
-                  onClick={() => switchLanguage("en")}
-                  className={`px-4 py-2 rounded border ${
-                    locale === "en"
-                      ? "border-blue-500 text-blue-600"
-                      : "border-gray-300 dark:border-gray-600"
-                  }`}
-                >
-                  🇺🇸 EN
-                </button>
-
-                <button
-                  onClick={() => switchLanguage("fr")}
-                  className={`px-4 py-2 rounded border ${
-                    locale === "fr"
-                      ? "border-blue-500 text-blue-600"
-                      : "border-gray-300 dark:border-gray-600"
-                  }`}
-                >
-                  🇫🇷 FR
-                </button>
-              </div>
+              ))}
             </div>
 
+            <div className="flex items-center md:space-x-5 lg:space-x-7">
+              <ThemeSwitcher />
+              <LanguageSwitcher />
+              <ResumeButton />
+            </div>
+          </div>
+
+          <div className="md:hidden flex items-center space-x-4">
+            <ThemeSwitcher />
+            <LanguageSwitcher />
             <button
-              onClick={toggleTheme}
-              className="mt-4 flex items-center gap-2 text-gray-700 dark:text-gray-300"
+              className="p-2 rounded-md text-gray-400 hover:text-primary focus:outline-none"
+              onClick={() => setOpen(!open)}
             >
-              {theme === "light" ? <Moon size={22} /> : <Sun size={22} />}
-              {theme === "light" ? "Dark Mode" : "Light Mode"}
+              <span className="sr-only">Open main menu</span>
+              {open ? <X size={18} /> : <Menu size={18} />}
             </button>
-          </ul>
+          </div>
+        </div>
+      </div>
+
+      {open && (
+        <div className="md:hidden bg-white dark:bg-slate-900 shadow-lg rounded-b-lg mt-1 animate-fade-in">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navLinks.map((link) => (
+              <Link
+                key={link.key}
+                href={link.href}
+                className="block px-3 py-2 text-base font-medium dark:text-secondary hover:text-primary transition-colors cursor-pointer"
+                onClick={() => setOpen(false)}
+              >
+                {t(link.key)}
+              </Link>
+            ))}
+            <div className="px-3 pt-2">
+              <ResumeButton />
+            </div>
+          </div>
         </div>
       )}
-    </header>
+    </nav>
   );
-};
+}
 
-export default Navbar;
+function ResumeButton() {
+  return (
+    <Link
+      href="https://drive.google.com/file/d/1UK5AFN_cqMhzX9nhRCu4PtdUqt_KZwUb/view"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-white dark:text-black hover:bg-primary/90 shadow-[0_0_15px_rgba(38,98,217,0.3)] hover:shadow-[0_0_25px_rgba(38,98,217,0.4)] h-9 rounded-md px-4"
+    >
+      Resume
+    </Link>
+  );
+}
