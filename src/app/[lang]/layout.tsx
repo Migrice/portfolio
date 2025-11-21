@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import "../globals.css";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
+  variable: "--lato",
   subsets: ["latin"],
 });
 

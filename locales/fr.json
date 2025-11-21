@@ -14,7 +14,8 @@
     "about": "À propos",
     "projects": "Projets",
     "skills": "Compétences",
-    "contact": "Contact"
+    "contact": "Contact",
+    "experiences": "Experiences"
   },
   "About": {
     "clean_code": "Code Propre",

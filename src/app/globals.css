@@ -1,1 +1,62 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #2662d9;
+  --color-secondary: #e4e6e9;
+}
+
+:root {
+  --background-color: #f7fafc;
+  --foreground-color: #0a0a0a;
+}
+
+.dark {
+  --background-color: #020817;
+  --foreground-color: #ffffff;
+}
+
+/* Animation pour le menu mobile */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+/* Scrollbar personnalisée (optionnel) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e4fb0;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base styles */
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
