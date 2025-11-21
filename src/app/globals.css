@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Active le dark mode par classe */
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-primary: #2662d9;
   --color-secondary: #e4e6e9;
@@ -13,6 +16,21 @@
 .dark {
   --background-color: #020817;
   --foreground-color: #ffffff;
+}
+
+/* Transition douce globale pour le changement de thème */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease, fill 0.3s ease, stroke 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Désactive les transitions pour les éléments qui n'en ont pas besoin */
+*:where([class*="transition-none"]),
+*:where([class*="transition-none"])::before,
+*:where([class*="transition-none"])::after {
+  transition: none !important;
 }
 
 /* Animation pour le menu mobile */
@@ -31,24 +49,6 @@
   animation: fade-in 0.2s ease-out;
 }
 
-/* Scrollbar personnalisée (optionnel) */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #1e4fb0;
-}
-
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
@@ -58,5 +58,4 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
 }

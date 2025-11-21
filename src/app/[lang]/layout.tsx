@@ -18,7 +18,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Emelda FOMENA",
-  description: "CV",
+  description: "Découvrez mes projets en React, Next.js, Python et IA",
+  keywords: [
+    "Emelda",
+    "Fomena",
+    "Fullstack",
+    "React",
+    "Next.js",
+    "Python",
+    "AI",
+  ],
 };
 
 export default async function RootLayout({
@@ -35,7 +44,7 @@ export default async function RootLayout({
   }
   setRequestLocale(lang);
   return (
-    <html lang={lang}>
+    <html lang={lang} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
