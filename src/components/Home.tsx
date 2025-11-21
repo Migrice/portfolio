@@ -145,6 +145,7 @@ export default function Hero() {
             </div>
 
             <div className="space-y-2 font-mono text-sm">
+              {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
               <div className="text-gray-500">// Software Engineer</div>
               <div>
                 <span className="text-pink-600">const</span>{" "}
@@ -156,7 +157,9 @@ export default function Hero() {
               <div className="pl-6">
                 <span className="text-purple-600">name</span>
                 <span className="text-gray-500">:</span>{" "}
-                <span className="text-green-600">'Emelda Fomena'</span>
+                <span className="text-green-600">
+                  &apos;Emelda Fomena&apos;
+                </span>
                 <span className="text-gray-500">,</span>
               </div>
 
@@ -164,11 +167,11 @@ export default function Hero() {
                 <span className="text-purple-600">skills</span>
                 <span className="text-gray-500">:</span>{" "}
                 <span className="text-orange-500">[</span>
-                <span className="text-green-600">'Python'</span>
+                <span className="text-green-600">&apos;Python&apos;</span>
                 <span className="text-gray-500">,</span>{" "}
-                <span className="text-green-600">'Next JS'</span>
+                <span className="text-green-600">&apos;Next JS&apos;</span>
                 <span className="text-gray-500">,</span>{" "}
-                <span className="text-green-600">'Docker'</span>
+                <span className="text-green-600">&apos;Docker&apos;</span>
                 <span className="text-orange-500">]</span>
                 <span className="text-gray-500">,</span>
               </div>
@@ -177,9 +180,9 @@ export default function Hero() {
                 <span className="text-purple-600">focuses</span>
                 <span className="text-gray-500">:</span>{" "}
                 <span className="text-orange-500">[</span>
-                <span className="text-green-600">'Full-Stack'</span>
+                <span className="text-green-600">&apos;Full-Stack&apos;</span>
                 <span className="text-gray-500">,</span>{" "}
-                <span className="text-green-600">'AI'</span>
+                <span className="text-green-600">&apos;AI&apos;</span>
                 <span className="text-orange-500">]</span>
                 <span className="text-gray-500">,</span>
               </div>
@@ -187,7 +190,7 @@ export default function Hero() {
               <div className="pl-6">
                 <span className="text-purple-600">learning</span>
                 <span className="text-gray-500">:</span>{" "}
-                <span className="text-green-600">'Always'</span>
+                <span className="text-green-600">&apos;Always&apos;</span>
               </div>
 
               <div>

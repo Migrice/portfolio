@@ -2,6 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
@@ -23,20 +24,20 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-white/10 backdrop-blur-md py-4">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
-          <a href="/">
+          <Link href="/">
             <span className="text-xl font-bold text-primary">EF.</span>
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center md:space-x-10 lg:space-x-14">
             <div className="flex items-center md:space-x-5 lg:space-x-7">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.key}
                   href={link.href}
                   className="text-sm font-medium dark:text-secondary hover:text-primary transition-colors cursor-pointer"
                 >
                   {t(link.key)}
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -65,14 +66,14 @@ export default function Navbar() {
         <div className="md:hidden bg-white dark:bg-slate-900 shadow-lg rounded-b-lg mt-1 animate-fade-in">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.key}
                 href={link.href}
                 className="block px-3 py-2 text-base font-medium dark:text-secondary hover:text-primary transition-colors cursor-pointer"
                 onClick={() => setOpen(false)}
               >
                 {t(link.key)}
-              </a>
+              </Link>
             ))}
             <div className="px-3 pt-2">
               <ResumeButton />
@@ -86,13 +87,13 @@ export default function Navbar() {
 
 function ResumeButton() {
   return (
-    <a
+    <Link
       href="https://drive.google.com/file/d/1UK5AFN_cqMhzX9nhRCu4PtdUqt_KZwUb/view"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-white dark:text-black hover:bg-primary/90 shadow-[0_0_15px_rgba(38,98,217,0.3)] hover:shadow-[0_0_25px_rgba(38,98,217,0.4)] h-9 rounded-md px-4"
     >
       Resume
-    </a>
+    </Link>
   );
 }
