@@ -20,7 +20,7 @@ export default function Navbar() {
   const t = useTranslations("Navbar");
 
   return (
-    <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-4">
+    <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-white/10 backdrop-blur-md py-4">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           <a href="/">

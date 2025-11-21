@@ -1,13 +1,14 @@
 {
   "Hero": {
     "salutation": "Salut, je suis",
-    "software_developer_ai_specialist": "Développeuse Full-Stack & Data Scientist",
+    "software_developer_ai_specialist": "Développeur Full-Stack & Data Scientist",
     "I build modern apps with": "Je crée des applications modernes avec ",
     "and": "et ",
     "see_my_projects": "Voir mes projets",
     "download_cv": "Télécharger le CV",
     "by_integrating_intelligent_solutions": "en intégrant des solutions intelligentes basées sur l’IA.",
-    "available_for_work": "Disponible pour des projets"
+    "available_for_work": "Disponible pour des projets",
+    "contact_me": "Contactez-moi"
   },
   "Navbar": {
     "home": "Accueil",
