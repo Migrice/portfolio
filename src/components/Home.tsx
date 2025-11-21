@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center relative overflow-hidden "
+      className="min-h-screen flex items-center relative overflow-hidden  "
     >
       <div className="flex flex-col lg:flex-row items-center justify-between  mx-auto gap-10 mt-30 md:mt-0 px-6 md:px-0 pb-6">
         <div className="flex flex-col max-w-xl space-y-6 text-center lg:text-left">
@@ -134,7 +134,7 @@ export default function Hero() {
             }}
           />
 
-          <div className="relative bg-white border-[3px] border-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+          <div className="relative bg-white dark:bg-[#0d111f] border-[3px] border-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-[0_0_30px_rgba(59,130,246,0.1)]">
             <div className="flex justify-between items-center mb-6">
               <div className="flex space-x-2">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
