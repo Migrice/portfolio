@@ -85,7 +85,7 @@ export default function Navbar() {
   );
 }
 
-function ResumeButton() {
+export function ResumeButton() {
   return (
     <Link
       href="https://drive.google.com/file/d/1UK5AFN_cqMhzX9nhRCu4PtdUqt_KZwUb/view"
