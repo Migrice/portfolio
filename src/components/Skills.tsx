@@ -125,7 +125,7 @@ const Skills = () => {
                     <h2 className="font-semibold">{cat.name}</h2>
                   </div>
 
-                  <div className="flex flex-wrap gap-2 items-center justify-center md:justify-start md:items-start">
+                  <div className="flex flex-wrap gap-2 items-center justify-start md:items-start">
                     {cat.skills.map((skill, index) => (
                       <div
                         key={index}
