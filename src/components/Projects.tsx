@@ -112,7 +112,7 @@ const Projects = () => {
       ? projects
       : projects.filter((p) => p.category === activeTab);
 
-  let displayedProjects = showAll
+  const displayedProjects = showAll
     ? filteredProjects
     : filteredProjects.slice(0, 3);
 
@@ -214,8 +214,11 @@ const Projects = () => {
                 </p>
 
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.slice(0, 4).map((tag) => (
-                    <span className="text-xs bg-primary/10 text-primary rounded-full px-3 py-1">
+                  {project.tags.slice(0, 4).map((tag, key) => (
+                    <span
+                      key={key}
+                      className="text-xs bg-primary/10 text-primary rounded-full px-3 py-1"
+                    >
                       {tag}
                     </span>
                   ))}
