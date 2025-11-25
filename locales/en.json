@@ -68,7 +68,9 @@
     "project": "Project",
     "no_projects": "No project found",
     "no_projects_desc": "[Projects.no_projects_desc]",
-    "project_8_desc": "Platform for the sale and inventory management of agricultural and pastoral products"
+    "project_8_desc": "Platform for the sale and inventory management of agricultural and pastoral products",
+    "show-less": "Show Less",
+    "show-more": "Show More"
   },
   "Skills": {
     "frontend": "Frontend",

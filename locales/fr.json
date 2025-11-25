@@ -68,7 +68,9 @@
     "project": "Projet",
     "no_projects": "Aucun projet trouvé",
     "no_projects_desc": "[Projects.no_projects_desc]",
-    "project_8_desc": "Plateforme de vente et de gestion de stock des produits agro-pastoraux"
+    "project_8_desc": "Plateforme de vente et de gestion de stock des produits agro-pastoraux",
+    "show-less": "Voir Moins",
+    "show-more": "Voir Plus"
   },
   "Skills": {
     "frontend": "Frontend",

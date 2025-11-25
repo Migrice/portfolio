@@ -9,6 +9,7 @@ import { useState } from "react";
 const Projects = () => {
   const t = useTranslations("Projects");
   const [activeTab, setActiveTab] = useState("all");
+  const [showAll, setShowAll] = useState(false);
 
   const projects = [
     {
@@ -111,6 +112,10 @@ const Projects = () => {
       ? projects
       : projects.filter((p) => p.category === activeTab);
 
+  let displayedProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, 3);
+
   return (
     <section className="relative py-14">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
@@ -127,7 +132,6 @@ const Projects = () => {
 
           <p className="max-w-2xl opacity-80">{t("projects_description")}</p>
         </motion.div>
-
         <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-4 mt-8">
           {tabs.map((tab) => (
             <button
@@ -149,12 +153,11 @@ const Projects = () => {
             </button>
           ))}
         </div>
-
         <div
           key={activeTab}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {filteredProjects.map((project) => (
+          {displayedProjects.map((project) => (
             <div
               key={project.id}
               className="group relative  rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-primary/20"
@@ -270,8 +273,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
-
-        {filteredProjects.length === 0 && (
+        {displayedProjects.length === 0 && (
           <div className="text-center py-20">
             <div className="text-6xl mb-4">🚧</div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -283,6 +285,29 @@ const Projects = () => {
             </p>
           </div>
         )}
+        <div className="flex justify-center mt-12">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-gray-300 bg-background hover:bg-accent hover:bg-primary/10  h-10 px-4 py-2 group"
+          >
+            <span> {showAll ? t("show-less") : t("show-more")}</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="lucide lucide-code ml-2 group-hover:translate-x-1 transition-transform"
+            >
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </button>
+        </div>{" "}
       </div>
     </section>
   );
