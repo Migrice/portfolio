@@ -1,7 +1,10 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Code2, Download, FileText, Rocket, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import Link from "next/link";
+import ProfileImage from "./ProfileImage";
 
 const About = () => {
   const t = useTranslations("About");
@@ -27,10 +30,17 @@ const About = () => {
   return (
     <section className="relative py-14">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <h2 className="relative inline-block text-2xl md:text-3xl lg:text-4xl font-bold opacity-90 mb-10">
-          {t("about_me")}
-          <span className="absolute left-0 -bottom-2 w-16 h-[5px] bg-primary"></span>
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="relative inline-block text-2xl md:text-3xl lg:text-4xl font-bold opacity-90 mb-10">
+            {t("about_me")}
+            <span className="absolute left-0 -bottom-2 w-16 h-[5px] bg-primary"></span>
+          </h2>{" "}
+        </motion.div>
 
         <div className=" grid grid-cols-1 lg:grid-cols-12 gap-14">
           <div className="lg:col-span-8 space-y-6">
@@ -44,8 +54,9 @@ const About = () => {
 
             <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
               {features.map((feature, index) => (
-                <div
+                <motion.div
                   key={index}
+                  whileHover={{ scale: 1.05 }}
                   className="rounded-lg  shadow-sm relative overflow-hidden transition-all duration-300 h-full border-[1px] border-white/10 backdrop-blur-sm bg-card/50 "
                 >
                   <div className="relative z-8">
@@ -59,32 +70,20 @@ const About = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start gap-5">
-            <div className="relative opacity-100 transform-none">
-              <span className="relative flex shrink-0 overflow-hidden rounded-full w-40 h-40 border-4 border-primary/20">
-                <Image
-                  className="aspect-square h-full w-full"
-                  alt="Emelda Fomena"
-                  width={40}
-                  height={40}
-                  src="/images/hero.jpg"
-                  objectFit="contain"
-                />
-              </span>
-            </div>
+            <ProfileImage />
             <div className="text-center lg:text-left opacity-100 transform-none">
               <h3 className="text-2xl font-bold">Emelda Fomena</h3>
               <p className="mt-1 opacity-80 text-sm">
-                {" "}
                 {t("software_developer_ai_specialist")}
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 items-center justify-center md:justify-start md:items-start">
               <div className="border border-primary/10 px-3 py-1 focus:outline-none focus:ring-2  focus:ring-offset-2 bg-primary/10 rounded-full text-sm opacity-70">
                 Python
               </div>
