@@ -47,7 +47,9 @@
     "subject_placeholder": "[Contact.subject_placeholder]",
     "message_placeholder": "Your message...",
     "sending": "Sending...",
-    "send_message": "Send Message"
+    "send_message": "Send Message",
+    "contact-info": "Contact Informations",
+    "contact-info-desc": "Fill up the form and I'll get back to you as soon as possible."
   },
   "Projects": {
     "project_1_desc": "Web application for laundry management supporting multiple drop-off locations and various service types.",
@@ -78,7 +80,19 @@
     "ai_ml": "AI & ML",
     "tools": "Tools",
     "my_skills": "Technologies & Tools",
-    "skills_description": "The technologies most frequently used in my projects.",
-    "certifications": "Certifications"
+    "skills_description": "I have worked with a wide range of technologies in the field of AI, web development, from front-end to back-end and everything in between.",
+    "certifications": "Certifications",
+    "Programming Languages": "Programming Languages",
+    "Frontend Tools": "Frontend Tools",
+    "Backend": "Backend Tools",
+    "Mobile": "Mobile",
+    "Databases": "Databases",
+    "Artificial Intelligence": "Artificial Intelligence",
+    "CI/CD": "CI/CD",
+    "Tools": "Tools"
+  },
+  "Footer": {
+    "bio": "Building elegant digital solutions with a focus on user experience and technical excellence.    ",
+    "build-with": "Built with Next JS and Tailwind"
   }
 }

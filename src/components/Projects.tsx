@@ -117,16 +117,16 @@ const Projects = () => {
     : filteredProjects.slice(0, 3);
 
   return (
-    <section className="relative py-14">
+    <section className="relative py-14" id="projects">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="relative inline-block text-2xl md:text-3xl lg:text-4xl font-bold opacity-90 mb-10">
-            {t("projects")}
+            {t("my_projects")}
             <span className="absolute left-0 -bottom-4 w-16 h-[5px] bg-primary"></span>
           </h2>
 
@@ -160,7 +160,7 @@ const Projects = () => {
           {displayedProjects.map((project) => (
             <div
               key={project.id}
-              className="group relative  rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-primary/20"
+              className="group relative  rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-[#020817] dark:border dark:border-primary/20"
             >
               <div className="relative  overflow-hidden rounded-bl-4xl ">
                 <div className=" relative overflow-hidden rounded-t-lg h-48 rounded-bl-4xl">

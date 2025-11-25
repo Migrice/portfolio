@@ -12,7 +12,7 @@ const navLinks = [
   { href: "#about", key: "about" },
   { href: "#projects", key: "projects" },
   { href: "#skills", key: "skills" },
-  { href: "#experiences", key: "experiences" },
+  // { href: "#experiences", key: "experiences" },
   { href: "#contact", key: "contact" },
 ];
 
@@ -31,13 +31,13 @@ export default function Navbar() {
           <div className="hidden md:flex items-center md:space-x-10 lg:space-x-14">
             <div className="flex items-center md:space-x-5 lg:space-x-7">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.key}
                   href={link.href}
                   className="text-sm font-medium dark:text-secondary hover:text-primary transition-colors cursor-pointer"
                 >
                   {t(link.key)}
-                </Link>
+                </a>
               ))}
             </div>
 
