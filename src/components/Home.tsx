@@ -32,20 +32,23 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 relative z-10 opacity-100 transform-none">
             <div className="flex flex-row gap-4 items-center flex-wrap">
-              <div className="flex flex-row items-center gap-4">
+              <motion.div
+                className="flex flex-row items-center gap-4"
+                whileHover={{ scale: 1.05 }}
+              >
                 <a href="#contact" aria-label="Go to contact section">
                   <button className="inline-flex  items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-white hover:bg-primary/90 shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)] hover:shadow-[0_0_25px_rgba(var(--primary-rgb),0.4)] h-10 px-4 min-w-[120px] py-3 text-base">
                     {t("contact_me")}
                   </button>
                 </a>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }}>
                 <a href="#projects" aria-label="Go to projects section">
-                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background h-10 px-4 min-w-[120px] py-3 text-base hover:bg-primary/70 hover:text-white">
+                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background h-10 px-4 min-w-[120px] py-3 text-base hover:shadow-[0_0_25px_rgba(var(--primary-rgb),0.4)]">
                     {t("see_my_projects")}
                   </button>
                 </a>
-              </div>
+              </motion.div>
             </div>
 
             <div className="flex items-center gap-4 ml-0 lg:ml-4 mt-4 lg:mt-0">

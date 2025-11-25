@@ -55,7 +55,7 @@
     "project_3_desc": "Web platform for digitizing sustainability processes in agricultural value chains.",
     "project_4_desc": "Aspect-based sentiment analysis AI model",
     "my_projects": "My Projects",
-    "projects_description": "Discover a selection of my recent work, combining modern design with cutting-edge technologies.",
+    "projects_description": "Here are some of the projects I've worked on, showcasing my skills in various technologies and problem domains.",
     "view_all_projects": "View all my projects on GitHub",
     "project_5_desc": "Offline-first mobile application for personal expense tracking with data visualization.",
     "project_6_desc": "[Projects.project_6_desc]",
@@ -68,7 +68,9 @@
     "project": "Project",
     "no_projects": "No project found",
     "no_projects_desc": "[Projects.no_projects_desc]",
-    "project_8_desc": "Platform for the sale and inventory management of agricultural and pastoral products"
+    "project_8_desc": "Platform for the sale and inventory management of agricultural and pastoral products",
+    "show-less": "Show Less",
+    "show-more": "Show More"
   },
   "Skills": {
     "frontend": "Frontend",
