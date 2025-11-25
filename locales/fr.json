@@ -47,7 +47,9 @@
     "subject_placeholder": "[Contact.subject_placeholder]",
     "message_placeholder": "Votre message...",
     "sending": "Envoi en cours...",
-    "send_message": "Envoyer le message"
+    "send_message": "Envoyer le message",
+    "contact-info": "Informations de contact",
+    "contact-info-desc": "Remplissez le formulaire et je vous répondrai dans les plus brefs délais."
   },
   "Projects": {
     "project_1_desc": "Application web de gestion de pressing avec prise en compte de plusieurs depots et types de services.",
@@ -78,7 +80,19 @@
     "ai_ml": "IA",
     "tools": "Outils",
     "my_skills": "Technologies & Outils",
-    "skills_description": "Les technologies les plus souvent utilisées dans mes projets.",
-    "certifications": "Certifications"
+    "skills_description": "J'ai travaillé avec toute une gamme de technologies dans le domaine de l'IA, du développement web, du front-end au back-end en passant par tout ce qui se trouve entre eux.",
+    "certifications": "Certifications",
+    "Programming Languages": "Langages de programmation",
+    "Frontend Tools": "Outils Frontend",
+    "Backend": "Outils Backend",
+    "Mobile": "Développement mobile",
+    "Databases": "Bases de données",
+    "Artificial Intelligence": "Intelligence artificielle",
+    "CI/CD": "CI/CD",
+    "Tools": "Outils"
+  },
+  "Footer": {
+    "bio": "Création de solutions numériques élégantes, axées sur l’expérience utilisateur et l’excellence technique.",
+    "build-with": "Réalisé avec Next.js et Tailwind"
   }
 }
