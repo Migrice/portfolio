@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://emelda-fomena.vercel.app
+
+# Sitemaps
+Sitemap: https://emelda-fomena.vercel.app/sitemap.xml
