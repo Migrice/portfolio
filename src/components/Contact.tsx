@@ -28,8 +28,21 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simuler l'envoi (remplacer par votre logique d'envoi)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const res = await fetch("/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    console.log("res", res);
+
+    if (!res.ok) {
+      setIsLoading(false);
+      alert(t("error_sending_message"));
+      return;
+    }
 
     setIsSubmitted(true);
     setIsLoading(false);

@@ -86,6 +86,8 @@ export default function Navbar() {
 }
 
 export function ResumeButton() {
+  const t = useTranslations("Navbar");
+
   return (
     <Link
       href="https://drive.google.com/file/d/1UK5AFN_cqMhzX9nhRCu4PtdUqt_KZwUb/view"
@@ -93,7 +95,7 @@ export function ResumeButton() {
       rel="noopener noreferrer"
       className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-white dark:text-white hover:bg-primary/90 shadow-[0_0_15px_rgba(38,98,217,0.3)] hover:shadow-[0_0_25px_rgba(38,98,217,0.4)] h-9 rounded-md px-4"
     >
-      Resume
+      {t("resume")}
     </Link>
   );
 }
