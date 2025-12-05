@@ -16,7 +16,8 @@
     "projects": "Projets",
     "skills": "Compétences",
     "contact": "Contact",
-    "experiences": "Experiences"
+    "experiences": "Experiences",
+    "resume": "CV"
   },
   "About": {
     "clean_code": "Code Propre",
@@ -49,7 +50,8 @@
     "sending": "Envoi en cours...",
     "send_message": "Envoyer le message",
     "contact-info": "Informations de contact",
-    "contact-info-desc": "Remplissez le formulaire et je vous répondrai dans les plus brefs délais."
+    "contact-info-desc": "Remplissez le formulaire et je vous répondrai dans les plus brefs délais.",
+    "error_sending_message": "Une erreur est survenue lors de l'envoie du mail"
   },
   "Projects": {
     "project_1_desc": "Application web de gestion de pressing avec prise en compte de plusieurs depots et types de services.",

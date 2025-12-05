@@ -16,7 +16,8 @@
     "projects": "Projects",
     "skills": "Skills",
     "contact": "Contact",
-    "experiences": "Experiences"
+    "experiences": "Experiences",
+    "resume": "Resume"
   },
   "About": {
     "clean_code": "Clean Code",
@@ -49,7 +50,8 @@
     "sending": "Sending...",
     "send_message": "Send Message",
     "contact-info": "Contact Informations",
-    "contact-info-desc": "Fill up the form and I'll get back to you as soon as possible."
+    "contact-info-desc": "Fill up the form and I'll get back to you as soon as possible.",
+    "error_sending_message": "An error occured when sending Email"
   },
   "Projects": {
     "project_1_desc": "Web application for laundry management supporting multiple drop-off locations and various service types.",
